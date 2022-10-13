@@ -1,0 +1,15 @@
+{% assign numberOfVariants = product.variants.size %}
+
+<div class='one-size {% if numberOfVariants == 1 %}active{% endif %}'>
+  <p>One size</p>
+</div>
+<form class = 'form-options {% if numberOfVariants == 1 %}hide{% endif %}' action="/cart/add" method="post" style="text-align:center;"> 
+  <div class="selects">
+    <select name="id" class="product-options">
+      {% for variant in product.variants %}
+          <option data-price="{{ variant.price }}" data-img="{{ variant.image | img_url }}" value="{{ variant.id }}">{{ variant.title }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</form>
+<button data-cart-number='0' class="add-to-cart"><p>Add to cart</p></button>

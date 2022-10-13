@@ -1,0 +1,13 @@
+{%- if image != blank -%}
+  <img class="lazyload author-info__item-image"
+    src="{{ image | image_url }}"
+    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+    data-aspectratio="{{ image.aspect_ratio }}"
+    data-sizes="auto"
+    alt="{{ image.alt | escape }}">
+  <noscript>
+    <img class="author-info__item-image lazyloaded"
+      src="{{ image | img_url: '400x' }}"
+      alt="{{ image.alt | escape }}">
+  </noscript>
+{%- endif -%}

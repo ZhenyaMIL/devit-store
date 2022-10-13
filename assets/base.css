@@ -319,6 +319,36 @@ body,
   background-color: rgb(var(--color-background));
 }
 
+body.overlay::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, .2);
+}
+
+body.overlay {
+  position: relative;
+}
+
+.add-to-cart.successfullyAdded {
+  background-color: #358a57;
+  border: 1px solid#358a57;
+  color: white;
+}
+
+.add-to-cart.successfullyAdded:hover {
+  background-color: #358a57;
+  border: 1px solid#358a57;
+  color: white;
+}
+
+.add-to-cart p {
+  margin: 0;
+}
+
 .background-secondary {
   background-color: rgba(var(--color-foreground), 0.04);
 }
