@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Change product price/image after change select option
   selects.forEach(select => {
     setPriceProduct(select);
+    setImgSrc(select);
 
     select.addEventListener('change', () => {
       setPriceProduct(select);
@@ -48,10 +49,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function setImgSrc(select) {
     let selectedOption = select.selectedIndex;
+    let optionActiveName = select.querySelectorAll("option")[`${selectedOption}`].innerHTML;
     let imgSrc = select.querySelectorAll("option")[`${selectedOption}`].getAttribute('data-img');
     let currentImg = select.closest('.product-wrapper__products').querySelector(".product-image img");
 
-    currentImg.setAttribute('src', `${imgSrc}`);
+    if(optionActiveName != 'Default Title') {
+      currentImg.setAttribute('src', `${imgSrc}`);
+    }
   }
 
 // Adding to cart after click add button
