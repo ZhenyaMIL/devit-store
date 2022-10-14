@@ -15,6 +15,8 @@
 
 .wrapper-collections .wrapper-collections__collection img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .wrapper-collections__collection .img-wrapper img:hover {
@@ -29,6 +31,7 @@
 .product-wrapper__products {
   display: flex;
   padding-right: 30px;
+  height: 30%;
 }
 
 .modal-window {
@@ -64,7 +67,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 60px 50px 50px;
+  padding: 60px 40px 50px;
   box-shadow: 0 0 0 1px rgb(53 72 91 / 4%), 0 2px 2px rgb(0 0 0 / 0%), 0 4px 4px rgb(0 0 0 / 1%), 0 10px 8px rgb(0 0 0 / 2%), 0 15px 15px rgb(0 0 0 / 2%), 0 30px 30px rgb(0 0 0 / 2%), 0 70px 65px rgb(0 0 0 / 3%);
 }
 
@@ -156,6 +159,7 @@
 
 .modal-wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 .modal-wrapper__image-banner {
@@ -171,6 +175,7 @@
 .product-wrapper__products .product-image img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .product-wrapper__products .product-image {
@@ -206,4 +211,13 @@ option.hide {
 .modal-wrapper__products {
   max-height: 78vh;
   overflow: overlay;
+}
+
+.modal-wrapper__products::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f9f9fd;
+}
+
+.modal-wrapper__products::-webkit-scrollbar-thumb {
+  background-color: #0e1012;
 }
