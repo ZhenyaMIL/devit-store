@@ -42,6 +42,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .product-information__title h3 {
@@ -121,7 +122,12 @@
 }
 
 .product-information_description {
-  min-height: 40%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 40%;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .product-information_buttons button {
@@ -210,6 +216,7 @@ option.hide {
 
 .modal-wrapper__products {
   max-height: 78vh;
+  max-width: 50%;
   overflow: overlay;
 }
 

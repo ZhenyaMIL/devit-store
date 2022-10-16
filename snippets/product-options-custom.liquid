@@ -7,7 +7,7 @@
   <div class="selects">
     <select name="id" class="product-options">
       {% for variant in product.variants %}
-          <option data-price="{{ variant.price }}" data-img="{{ variant.image | img_url }}" value="{{ variant.id }}">{{ variant.title }}</option>
+          <option data-price="{{ variant.price }}" data-img="{{ variant.image |  img_url: '450x450' }}" value="{{ variant.id }}">{{ variant.title }}</option>
       {% endfor %}
     </select>
   </div>
